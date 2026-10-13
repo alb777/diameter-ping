@@ -12,6 +12,9 @@ import (
 	"github.com/alb777/diameter-ping/internal/peer"
 )
 
+// width is where text output wraps long hints and lists.
+const width = 100
+
 // reporter prints a run as ping-like text while it happens, or as one JSON object at the end.
 type reporter struct {
 	w    io.Writer
@@ -118,7 +121,10 @@ func (r *reporter) capabilities(c *peer.Capabilities, hint string) {
 	r.linef("  realm %s, product %q, vendor %d, host %s", c.OriginRealm, c.ProductName, c.VendorID,
 		strings.Join(cea.HostIPs, " "))
 	if len(apps) > 0 {
-		r.linef("%s", joinWrapped("  applications: ", apps, 100))
+		for i := 0; i < len(apps)-1; i++ {
+			apps[i] += "," // wrap breaks between applications, never inside one
+		}
+		r.linef("%s", wrap("  applications: ", apps))
 	}
 	r.details(&c.Answer, hint)
 }
@@ -140,13 +146,13 @@ func (r *reporter) watchdogTimeout(seq int, timeout time.Duration) {
 
 func (r *reporter) details(a *peer.Answer, hint string) {
 	if a.ErrorMessage != "" {
-		r.linef("  error message: %s", a.ErrorMessage)
+		r.linef("%s", wrap("  error message: ", strings.Fields(a.ErrorMessage)))
 	}
 	for _, code := range a.FailedAVPs {
 		r.linef("  failed AVP: %d %s", code, d.AVPName(code))
 	}
 	if hint != "" {
-		r.linef("  hint: %s", hint)
+		r.linef("%s", wrap("  hint: ", strings.Fields(hint)))
 	}
 }
 
@@ -154,7 +160,7 @@ func (r *reporter) failure(err error, hint string) {
 	r.rep.Error, r.rep.Hint = err.Error(), hint
 	r.linef("error: %v", err)
 	if hint != "" {
-		r.linef("hint: %s", hint)
+		r.linef("%s", wrap("hint: ", strings.Fields(hint)))
 	}
 }
 
@@ -211,18 +217,15 @@ func answerOf(a *peer.Answer) answerJSON {
 	}
 }
 
-// joinWrapped joins items with ", " into lines of at most width columns, never splitting an item.
-// Continuation lines start under the first item.
-func joinWrapped(prefix string, items []string, width int) string {
+// wrap joins tokens with spaces into lines of at most width columns, never splitting a token, so a long
+// hint or application list stays readable in a terminal. Continuation lines start under the first token.
+func wrap(prefix string, tokens []string) string {
 	var b strings.Builder
 	b.WriteString(prefix)
 	col := len(prefix)
-	for i, item := range items {
-		if i < len(items)-1 {
-			item += ","
-		}
+	for i, tok := range tokens {
 		if i > 0 {
-			if col+1+len(item) > width {
+			if col+1+len(tok) > width {
 				b.WriteString("\n" + strings.Repeat(" ", len(prefix)))
 				col = len(prefix)
 			} else {
@@ -230,8 +233,8 @@ func joinWrapped(prefix string, items []string, width int) string {
 				col++
 			}
 		}
-		b.WriteString(item)
-		col += len(item)
+		b.WriteString(tok)
+		col += len(tok)
 	}
 	return b.String()
 }

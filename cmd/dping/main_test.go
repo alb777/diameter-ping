@@ -139,11 +139,19 @@ func TestParseArgs(t *testing.T) {
 	}
 }
 
-func TestJoinWrapped(t *testing.T) {
-	got := joinWrapped("  apps: ", []string{"aaaa", "bbbb", "cccc", "dddd"}, 20)
-	want := "  apps: aaaa, bbbb,\n        cccc, dddd"
-	if got != want {
-		t.Errorf("got\n%s\nwant\n%s", got, want)
+func TestWrap(t *testing.T) {
+	long := strings.Fields(strings.Repeat("abcd ", 30))
+	got := wrap("  hint: ", long)
+	for _, line := range strings.Split(got, "\n") {
+		if len(line) > width {
+			t.Errorf("line of %d columns: %q", len(line), line)
+		}
+		if !strings.HasPrefix(line, "  hint: ") && !strings.HasPrefix(line, "        abcd") {
+			t.Errorf("continuation not aligned: %q", line)
+		}
+	}
+	if strings.Join(strings.Fields(strings.TrimPrefix(got, "  hint: ")), " ") != strings.Join(long, " ") {
+		t.Error("wrap lost or split a token")
 	}
 }
 
