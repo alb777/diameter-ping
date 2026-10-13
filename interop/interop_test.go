@@ -1,6 +1,3 @@
-// Package interop runs the dping binary against go-diameter, a Diameter implementation that shares no code
-// with dping, so dping's messages are checked by someone else's parser. It is a module of its own to keep
-// dping free of dependencies.
 package interop
 
 import (
@@ -12,10 +9,6 @@ import (
 	"time"
 
 	"github.com/fiorix/go-diameter/v4/diam"
-	"github.com/fiorix/go-diameter/v4/diam/avp"
-	"github.com/fiorix/go-diameter/v4/diam/datatype"
-	"github.com/fiorix/go-diameter/v4/diam/dict"
-	"github.com/fiorix/go-diameter/v4/diam/sm"
 )
 
 func TestDpingAgainstGoDiameter(t *testing.T) {
@@ -91,15 +84,7 @@ func TestDpingAgainstGoDiameter(t *testing.T) {
 
 func serve(t *testing.T, network string) (string, <-chan *diam.ErrorReport) {
 	t.Helper()
-	mux := sm.New(&sm.Settings{OriginHost: "server.test", OriginRealm: "test", ProductName: "go-diameter"})
-	// go-diameter's state machine handles CER and DWR but not DPR, so answer it here (RFC 6733 section 5.4.2).
-	mux.HandleFunc("DPR", func(c diam.Conn, m *diam.Message) {
-		a := m.Answer(diam.Success)
-		a.NewAVP(avp.OriginHost, avp.Mbit, 0, datatype.DiameterIdentity("server.test"))
-		a.NewAVP(avp.OriginRealm, avp.Mbit, 0, datatype.DiameterIdentity("test"))
-		a.WriteTo(c)
-	})
-	ln, err := diam.Listen(network, "127.0.0.1:0")
+	ln, reports, err := Start(network, "127.0.0.1:0", "server.test", "test")
 	if err != nil {
 		if network == "sctp" {
 			t.Skipf("no SCTP: %v", err)
@@ -107,7 +92,5 @@ func serve(t *testing.T, network string) (string, <-chan *diam.ErrorReport) {
 		t.Fatal(err)
 	}
 	t.Cleanup(func() { ln.Close() })
-	srv := &diam.Server{Network: network, Handler: mux, Dict: dict.Default}
-	go srv.Serve(ln)
-	return ln.Addr().String(), mux.ErrorReports()
+	return ln.Addr().String(), reports
 }

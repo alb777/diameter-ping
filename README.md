@@ -4,40 +4,44 @@
 
 One static binary, Go standard library only, no Diameter stack to install. Useful when a new peer, DRA or interconnect link does not come up and you need to know whether the problem is the network, the transport, or the Diameter identity and applications.
 
+![dping checking a peer over TCP and over SCTP, then explaining a 5010 and a refused connection](docs/demo.gif)
+
 ## Example
 
 These are real runs against [go-diameter](https://github.com/fiorix/go-diameter) on localhost.
 
 ```console
-$ dping -c 3 -app s6a -origin-host mme.epc.mnc001.mcc001.3gppnetwork.org 127.0.0.1
-DPING 127.0.0.1:3868 over TCP as mme.epc.mnc001.mcc001.3gppnetwork.org (realm epc.mnc001.mcc001.3gppnetwork.org)
-connected to 127.0.0.1:3868 from 127.0.0.1:57308 in 0.237 ms
-CEA from hss.epc.mnc001.mcc001.3gppnetwork.org: 2001 DIAMETER_SUCCESS, 0.211 ms
-  realm epc.mnc001.mcc001.3gppnetwork.org, product "go-diameter", vendor 0, host 127.0.0.1
+$ dping -c 3 -app s6a -origin-host mme.epc.example 127.0.0.1
+DPING 127.0.0.1:3868 over TCP as mme.epc.example (realm epc.example)
+connected to 127.0.0.1:3868 from 127.0.0.1:54108 in 0.095 ms
+CEA from hss.epc.example: 2001 DIAMETER_SUCCESS, 0.114 ms
+  realm epc.example, product "go-diameter", vendor 0, host 127.0.0.1
   applications: Diameter base accounting (3), Diameter Credit Control (4),
                 3GPP Gx (16777238, vendor 10415), NASREQ (1),
                 Diameter Credit Control (4, vendor 10415), 3GPP Rx (16777236, vendor 10415),
                 3GPP S6a (16777251, vendor 10415), 3GPP S13 (16777252, vendor 10415),
                 3GPP SWx (16777265, vendor 10415)
-DWA seq=1 from hss.epc.mnc001.mcc001.3gppnetwork.org: 2001 DIAMETER_SUCCESS, 0.128 ms
-DWA seq=2 from hss.epc.mnc001.mcc001.3gppnetwork.org: 2001 DIAMETER_SUCCESS, 0.403 ms
-DWA seq=3 from hss.epc.mnc001.mcc001.3gppnetwork.org: 2001 DIAMETER_SUCCESS, 0.407 ms
+DWA seq=1 from hss.epc.example: 2001 DIAMETER_SUCCESS, 0.049 ms
+DWA seq=2 from hss.epc.example: 2001 DIAMETER_SUCCESS, 0.413 ms
+DWA seq=3 from hss.epc.example: 2001 DIAMETER_SUCCESS, 0.289 ms
 DPA: 2001 DIAMETER_SUCCESS
 
 --- 127.0.0.1:3868 dping statistics ---
-3 DWR sent, 3 DWA received, 0% loss, rtt min/avg/max = 0.128/0.313/0.407 ms
+3 DWR sent, 3 DWA received, 0% loss, rtt min/avg/max = 0.049/0.250/0.413 ms
 
-$ dping -c 1 -app 16777999:10415 -origin-host mme.epc.mnc001.mcc001.3gppnetwork.org 127.0.0.1
-DPING 127.0.0.1:3868 over TCP as mme.epc.mnc001.mcc001.3gppnetwork.org (realm epc.mnc001.mcc001.3gppnetwork.org)
-connected to 127.0.0.1:3868 from 127.0.0.1:55928 in 0.280 ms
-CEA from hss.epc.mnc001.mcc001.3gppnetwork.org: 5010 DIAMETER_NO_COMMON_APPLICATION, 0.183 ms
-  realm epc.mnc001.mcc001.3gppnetwork.org, product "go-diameter", vendor 0, host 127.0.0.1
-  hint: no application in common: pass -app with one the peer serves, for example -app s6a (its CEA lists them when it sends any)
+$ dping -c 1 -app 16777999:10415 -origin-host mme.epc.example 127.0.0.1
+DPING 127.0.0.1:3868 over TCP as mme.epc.example (realm epc.example)
+connected to 127.0.0.1:3868 from 127.0.0.1:54116 in 0.342 ms
+CEA from hss.epc.example: 5010 DIAMETER_NO_COMMON_APPLICATION, 0.286 ms
+  realm epc.example, product "go-diameter", vendor 0, host 127.0.0.1
+  hint: no application in common: pass -app with one the peer serves, for example -app s6a (its CEA
+        lists them when it sends any)
 
-$ dping -origin-host mme.epc.mnc001.mcc001.3gppnetwork.org 127.0.0.1:3869
-DPING 127.0.0.1:3869 over TCP as mme.epc.mnc001.mcc001.3gppnetwork.org (realm epc.mnc001.mcc001.3gppnetwork.org)
+$ dping -origin-host mme.epc.example 127.0.0.1:3869
+DPING 127.0.0.1:3869 over TCP as mme.epc.example (realm epc.example)
 error: dial tcp 127.0.0.1:3869: connect: connection refused
-hint: the host answered with a TCP reset: nothing listens on that port, or a firewall rejects the connection. Some peers only listen on SCTP: try -sctp
+hint: the host answered with a TCP reset: nothing listens on that port, or a firewall rejects the
+      connection. Some peers only listen on SCTP: try -sctp
 ```
 
 ## Install
@@ -108,6 +112,7 @@ go vet ./... && go test -race ./...
 go run honnef.co/go/tools/cmd/staticcheck@v0.8.2 ./...
 (cd interop && go test ./...)    # against go-diameter
 go run ./tools/gendata           # refresh the IANA names
+(cd interop && go run ./demo)    # re-record docs/demo.gif from real runs, needs agg on PATH
 ```
 
 ## License
