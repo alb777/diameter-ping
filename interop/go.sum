@@ -1,0 +1,4 @@
+github.com/fiorix/go-diameter/v4 v4.5.1 h1:PyoRYwr5De0xMmImTOZepsMn34Yj6u3yDnJ2az9Hjls=
+github.com/fiorix/go-diameter/v4 v4.5.1/go.mod h1:V9bsPxAg2Qoeh/0p6DAuRpuHn80PIbMnld3OLPMEGas=
+github.com/ishidawataru/sctp v0.0.0-20251114114122-19ddcbc6aae2 h1:36qep4gxKs+JgeHGWeQ040RyZdt9kQlLglL1rFVn/oQ=
+github.com/ishidawataru/sctp v0.0.0-20251114114122-19ddcbc6aae2/go.mod h1:co9pwDoBCm1kGxawmb4sPq0cSIOOWNPT4KnHotMP1Zg=

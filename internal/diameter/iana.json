@@ -1,0 +1,1128 @@
+{
+  "source": "IANA AAA Parameters, registry updated 2026-01-27",
+  "results": [
+    {
+      "code": 1001,
+      "name": "DIAMETER_MULTI_ROUND_AUTH",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 2001,
+      "name": "DIAMETER_SUCCESS",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 2002,
+      "name": "DIAMETER_LIMITED_SUCCESS",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 2003,
+      "name": "DIAMETER_FIRST_REGISTRATION",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 2004,
+      "name": "DIAMETER_SUBSEQUENT_REGISTRATION",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 2005,
+      "name": "DIAMETER_UNREGISTERED_SERVICE",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 2006,
+      "name": "DIAMETER_SUCCESS_SERVER_NAME_NOT_STORED",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 2007,
+      "name": "DIAMETER_SERVER_SELECTION",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 2008,
+      "name": "DIAMETER_SUCCESS_AUTH_SENT_SERVER_NOT_STORED",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 2009,
+      "name": "DIAMETER_SUCCESS_RELOCATE_HA",
+      "ref": "RFC 5778"
+    },
+    {
+      "code": 3001,
+      "name": "DIAMETER_COMMAND_UNSUPPORTED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3002,
+      "name": "DIAMETER_UNABLE_TO_DELIVER",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3003,
+      "name": "DIAMETER_REALM_NOT_SERVED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3004,
+      "name": "DIAMETER_TOO_BUSY",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3005,
+      "name": "DIAMETER_LOOP_DETECTED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3006,
+      "name": "DIAMETER_REDIRECT_INDICATION",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3007,
+      "name": "DIAMETER_APPLICATION_UNSUPPORTED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3008,
+      "name": "DIAMETER_INVALID_HDR_BITS",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3009,
+      "name": "DIAMETER_INVALID_AVP_BITS",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3010,
+      "name": "DIAMETER_UNKNOWN_PEER",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 3011,
+      "name": "DIAMETER_REALM_REDIRECT_INDICATION",
+      "ref": "RFC 7075"
+    },
+    {
+      "code": 4001,
+      "name": "DIAMETER_AUTHENTICATION_REJECTED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 4002,
+      "name": "DIAMETER_OUT_OF_SPACE",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 4003,
+      "name": "ELECTION_LOST",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 4005,
+      "name": "DIAMETER_ERROR_MIP_REPLY_FAILURE",
+      "ref": "RFC 4004"
+    },
+    {
+      "code": 4006,
+      "name": "DIAMETER_ERROR_HA_NOT_AVAILABLE",
+      "ref": "RFC 4004"
+    },
+    {
+      "code": 4007,
+      "name": "DIAMETER_ERROR_BAD_KEY",
+      "ref": "RFC 4004"
+    },
+    {
+      "code": 4008,
+      "name": "DIAMETER_ERROR_MIP_FILTER_NOT_SUPPORTED",
+      "ref": "RFC 4004"
+    },
+    {
+      "code": 4010,
+      "name": "DIAMETER_END_USER_SERVICE_DENIED",
+      "ref": "RFC 8506"
+    },
+    {
+      "code": 4011,
+      "name": "DIAMETER_CREDIT_CONTROL_NOT_APPLICABLE",
+      "ref": "RFC 8506"
+    },
+    {
+      "code": 4012,
+      "name": "DIAMETER_CREDIT_LIMIT_REACHED",
+      "ref": "RFC 8506"
+    },
+    {
+      "code": 4013,
+      "name": "DIAMETER_USER_NAME_REQUIRED",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 4014,
+      "name": "RESOURCE_FAILURE",
+      "ref": "RFC 6736"
+    },
+    {
+      "code": 5001,
+      "name": "DIAMETER_AVP_UNSUPPORTED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5002,
+      "name": "DIAMETER_UNKNOWN_SESSION_ID",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5003,
+      "name": "DIAMETER_AUTHORIZATION_REJECTED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5004,
+      "name": "DIAMETER_INVALID_AVP_VALUE",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5005,
+      "name": "DIAMETER_MISSING_AVP",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5006,
+      "name": "DIAMETER_RESOURCES_EXCEEDED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5007,
+      "name": "DIAMETER_CONTRADICTING_AVPS",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5008,
+      "name": "DIAMETER_AVP_NOT_ALLOWED",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5009,
+      "name": "DIAMETER_AVP_OCCURS_TOO_MANY_TIMES",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5010,
+      "name": "DIAMETER_NO_COMMON_APPLICATION",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5011,
+      "name": "DIAMETER_UNSUPPORTED_VERSION",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5012,
+      "name": "DIAMETER_UNABLE_TO_COMPLY",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5013,
+      "name": "DIAMETER_INVALID_BIT_IN_HEADER",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5014,
+      "name": "DIAMETER_INVALID_AVP_LENGTH",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5015,
+      "name": "DIAMETER_INVALID_MESSAGE_LENGTH",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5016,
+      "name": "DIAMETER_INVALID_AVP_BIT_COMBO",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5017,
+      "name": "DIAMETER_NO_COMMON_SECURITY",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 5018,
+      "name": "DIAMETER_RADIUS_AVP_UNTRANSLATABLE",
+      "ref": "RFC 4849"
+    },
+    {
+      "code": 5024,
+      "name": "DIAMETER_ERROR_NO_FOREIGN_HA_SERVICE",
+      "ref": "RFC 4004"
+    },
+    {
+      "code": 5025,
+      "name": "DIAMETER_ERROR_END_TO_END_MIP_KEY_ENCRYPTION",
+      "ref": "RFC 4004"
+    },
+    {
+      "code": 5030,
+      "name": "DIAMETER_USER_UNKNOWN",
+      "ref": "RFC 8506"
+    },
+    {
+      "code": 5031,
+      "name": "DIAMETER_RATING_FAILED",
+      "ref": "RFC 8506"
+    },
+    {
+      "code": 5032,
+      "name": "DIAMETER_ERROR_USER_UNKNOWN",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5033,
+      "name": "DIAMETER_ERROR_IDENTITIES_DONT_MATCH",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5034,
+      "name": "DIAMETER_ERROR_IDENTITY_NOT_REGISTERED",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5035,
+      "name": "DIAMETER_ERROR_ROAMING_NOT_ALLOWED",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5036,
+      "name": "DIAMETER_ERROR_IDENTITY_ALREADY_REGISTERED",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5037,
+      "name": "DIAMETER_ERROR_AUTH_SCHEME_NOT_SUPPORTED",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5038,
+      "name": "DIAMETER_ERROR_IN_ASSIGNMENT_TYPE",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5039,
+      "name": "DIAMETER_ERROR_TOO_MUCH_DATA",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5040,
+      "name": "DIAMETER_ERROR_NOT SUPPORTED_USER_DATA",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 5041,
+      "name": "DIAMETER_ERROR_MIP6_AUTH_MODE",
+      "ref": "RFC 5778"
+    },
+    {
+      "code": 5042,
+      "name": "UNKNOWN_BINDING_TEMPLATE_NAME",
+      "ref": "RFC 6736"
+    },
+    {
+      "code": 5043,
+      "name": "BINDING_FAILURE",
+      "ref": "RFC 6736"
+    },
+    {
+      "code": 5044,
+      "name": "MAX_BINDINGS_SET_FAILURE",
+      "ref": "RFC 6736"
+    },
+    {
+      "code": 5045,
+      "name": "MAXIMUM_BINDINGS_REACHED_FOR_ENDPOINT",
+      "ref": "RFC 6736"
+    },
+    {
+      "code": 5046,
+      "name": "SESSION_EXISTS",
+      "ref": "RFC 6736"
+    },
+    {
+      "code": 5047,
+      "name": "INSUFFICIENT_CLASSIFIERS",
+      "ref": "RFC 6736"
+    },
+    {
+      "code": 5048,
+      "name": "DIAMETER_ERROR_EAP_CODE_UNKNOWN",
+      "ref": "RFC 6942"
+    }
+  ],
+  "applications": [
+    {
+      "code": 0,
+      "name": "Diameter common message",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 1,
+      "name": "NASREQ",
+      "ref": "RFC 7155"
+    },
+    {
+      "code": 2,
+      "name": "Mobile IPv4",
+      "ref": "RFC 4004"
+    },
+    {
+      "code": 3,
+      "name": "Diameter base accounting",
+      "ref": "RFC 6733"
+    },
+    {
+      "code": 4,
+      "name": "Diameter Credit Control",
+      "ref": "RFC 8506"
+    },
+    {
+      "code": 5,
+      "name": "Diameter EAP",
+      "ref": "RFC 4072"
+    },
+    {
+      "code": 6,
+      "name": "Diameter Session Initiation Protocol (SIP) Application",
+      "ref": "RFC 4740"
+    },
+    {
+      "code": 7,
+      "name": "Diameter Mobile IPv6 IKE (MIP6I)",
+      "ref": "RFC 5778"
+    },
+    {
+      "code": 8,
+      "name": "Diameter Mobile IPv6 Auth (MIP6A)",
+      "ref": "RFC 5778"
+    },
+    {
+      "code": 9,
+      "name": "Diameter QoS application",
+      "ref": "RFC 5866"
+    },
+    {
+      "code": 10,
+      "name": "Diameter Capabilities Update",
+      "ref": "RFC 6737"
+    },
+    {
+      "code": 11,
+      "name": "Diameter IKE SK (IKESK)",
+      "ref": "RFC 6738"
+    },
+    {
+      "code": 12,
+      "name": "Diameter NAT Control Application",
+      "ref": "RFC 6736"
+    },
+    {
+      "code": 13,
+      "name": "Diameter ERP",
+      "ref": "RFC 6942"
+    },
+    {
+      "code": 16777216,
+      "name": "3GPP Cx",
+      "ref": "3GPP TS 29.228"
+    },
+    {
+      "code": 16777217,
+      "name": "3GPP Sh",
+      "ref": "3GPP TS 29.328"
+    },
+    {
+      "code": 16777218,
+      "name": "3GPP Re",
+      "ref": "3GPP TS 32.296"
+    },
+    {
+      "code": 16777219,
+      "name": "3GPP Wx",
+      "ref": "3GPP TS 29.234"
+    },
+    {
+      "code": 16777220,
+      "name": "3GPP Zn",
+      "ref": "3GPP TS 29.109"
+    },
+    {
+      "code": 16777221,
+      "name": "3GPP Zh",
+      "ref": "3GPP TS 29.109"
+    },
+    {
+      "code": 16777222,
+      "name": "3GPP Gq",
+      "ref": "3GPP TS 29.209"
+    },
+    {
+      "code": 16777223,
+      "name": "3GPP Gmb",
+      "ref": "3GPP TS 29.061"
+    },
+    {
+      "code": 16777224,
+      "name": "3GPP Gx",
+      "ref": "3GPP TS 29.210"
+    },
+    {
+      "code": 16777225,
+      "name": "3GPP Gx over Gy",
+      "ref": "3GPP TS 29.210"
+    },
+    {
+      "code": 16777226,
+      "name": "3GPP MM10",
+      "ref": "3GPP TS 29.140"
+    },
+    {
+      "code": 16777227,
+      "name": "Ericsson MSI"
+    },
+    {
+      "code": 16777228,
+      "name": "Ericsson Zx"
+    },
+    {
+      "code": 16777229,
+      "name": "3GPP Rx",
+      "ref": "3GPP TS 29.211"
+    },
+    {
+      "code": 16777230,
+      "name": "3GPP Pr",
+      "ref": "3GPP TS 29.234"
+    },
+    {
+      "code": 16777231,
+      "name": "ETSI e4",
+      "ref": "ETSI ES 283 034"
+    },
+    {
+      "code": 16777232,
+      "name": "Ericsson Charging-CIP"
+    },
+    {
+      "code": 16777233,
+      "name": "Ericsson Mm"
+    },
+    {
+      "code": 16777234,
+      "name": "Vodafone Gx+"
+    },
+    {
+      "code": 16777235,
+      "name": "ITU-T Rs",
+      "ref": "ITU-T Recommendation Q.3301.1"
+    },
+    {
+      "code": 16777236,
+      "name": "3GPP Rx",
+      "ref": "3GPP TS 29.214"
+    },
+    {
+      "code": 16777237,
+      "name": "3GPP2 Ty"
+    },
+    {
+      "code": 16777238,
+      "name": "3GPP Gx",
+      "ref": "3GPP TS 29.212"
+    },
+    {
+      "code": 16777239,
+      "name": "Juniper Cluster"
+    },
+    {
+      "code": 16777240,
+      "name": "Juniper Policy-Control-AAA"
+    },
+    {
+      "code": 16777241,
+      "name": "iptego USPI"
+    },
+    {
+      "code": 16777242,
+      "name": "Covergence-specific SIP routing"
+    },
+    {
+      "code": 16777243,
+      "name": "Policy Processing",
+      "ref": "OMA PEEM V1.0"
+    },
+    {
+      "code": 16777244,
+      "name": "Juniper Policy-Control-JSRC"
+    },
+    {
+      "code": 16777245,
+      "name": "ITU-T S-TC1",
+      "ref": "ITU-T Recommendation Q.3221"
+    },
+    {
+      "code": 16777246,
+      "name": "NSN Unified Charging Trigger Function (UCTF)"
+    },
+    {
+      "code": 16777247,
+      "name": "3GPP2 CAN Access Authentication and Authorization"
+    },
+    {
+      "code": 16777248,
+      "name": "3GPP2 WLAN Interworking Access Authentication and         \nAuthorization"
+    },
+    {
+      "code": 16777249,
+      "name": "3GPP2 WLAN Interworking Accounting"
+    },
+    {
+      "code": 16777250,
+      "name": "3GPP Sta",
+      "ref": "3GPP TS 29.273"
+    },
+    {
+      "code": 16777251,
+      "name": "3GPP S6a",
+      "ref": "3GPP TS 29.272"
+    },
+    {
+      "code": 16777252,
+      "name": "3GPP S13",
+      "ref": "3GPP TS 29.272"
+    },
+    {
+      "code": 16777253,
+      "name": "ETSI Re",
+      "ref": "ETSI TS 183 060"
+    },
+    {
+      "code": 16777254,
+      "name": "ETSI GOCAP",
+      "ref": "ETSI ES 283 039"
+    },
+    {
+      "code": 16777255,
+      "name": "SLg",
+      "ref": "3GPP TS 29.172"
+    },
+    {
+      "code": 16777256,
+      "name": "ITU-T Rw",
+      "ref": "ITU-T Rec. Q.3303.3"
+    },
+    {
+      "code": 16777257,
+      "name": "ETSI a4"
+    },
+    {
+      "code": 16777258,
+      "name": "ITU-T Rt",
+      "ref": "ITU-T Rec. Q.3305.1"
+    },
+    {
+      "code": 16777259,
+      "name": "CARA"
+    },
+    {
+      "code": 16777260,
+      "name": "CAMA"
+    },
+    {
+      "code": 16777261,
+      "name": "Femtocell extension to Diameter EAP Application"
+    },
+    {
+      "code": 16777262,
+      "name": "ITU-T Ru",
+      "ref": "ITU-T Rec. Q.nacp.Ru Q.nacp.Ru"
+    },
+    {
+      "code": 16777263,
+      "name": "ITU-T Ng",
+      "ref": "ITU-T Rec. Q.nacp.Ru Q.nacp.Ru"
+    },
+    {
+      "code": 16777264,
+      "name": "3GPP SWm",
+      "ref": "3GPP TS 29.273"
+    },
+    {
+      "code": 16777265,
+      "name": "3GPP SWx",
+      "ref": "3GPP TS 29.273"
+    },
+    {
+      "code": 16777266,
+      "name": "3GPP Gxx",
+      "ref": "3GPP TS 29.212"
+    },
+    {
+      "code": 16777267,
+      "name": "3GPP S9",
+      "ref": "3GPP TS 29.215"
+    },
+    {
+      "code": 16777268,
+      "name": "3GPP Zpn",
+      "ref": "3GPP TS 29.109"
+    },
+    {
+      "code": 16777269,
+      "name": "Ericsson HSI"
+    },
+    {
+      "code": 16777270,
+      "name": "Juniper-Example"
+    },
+    {
+      "code": 16777271,
+      "name": "ITU-T Ri",
+      "ref": "ITU-T Rec. Q.3307.1"
+    },
+    {
+      "code": 16777272,
+      "name": "3GPP S6b",
+      "ref": "3GPP TS 29.273"
+    },
+    {
+      "code": 16777273,
+      "name": "Juniper JGx"
+    },
+    {
+      "code": 16777274,
+      "name": "ITU-T Rd",
+      "ref": "ITU-T Rec. Q.3306.1"
+    },
+    {
+      "code": 16777275,
+      "name": "ADMI Notification Application"
+    },
+    {
+      "code": 16777276,
+      "name": "ADMI Messaging Interface Application"
+    },
+    {
+      "code": 16777277,
+      "name": "Peter-Service VSI"
+    },
+    {
+      "code": 16777278,
+      "name": "ETSI Rr request model",
+      "ref": "ETSI TS 183 071"
+    },
+    {
+      "code": 16777279,
+      "name": "ETSI Rr delegated model",
+      "ref": "ETSI TS 183 071"
+    },
+    {
+      "code": 16777280,
+      "name": "WIMAX HRPD Interworking",
+      "ref": "3GPP2 X.S0058-0 v1.0"
+    },
+    {
+      "code": 16777281,
+      "name": "WiMAX Network Access Authentication and Authorization Diameter Application (WNAAADA)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777282,
+      "name": "WiMAX Network Accounting Diameter Application (WNADA)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777283,
+      "name": "WiMAX MIP4 Diameter Application (WM4DA)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777284,
+      "name": "WiMAX MIP6 Diameter Application (WM6DA)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777285,
+      "name": "WiMAX DHCP Diameter Application (WDDA)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777286,
+      "name": "WiMAX-Location-Authentication-Authorization Diameter Application (WLAADA)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777287,
+      "name": "WiMAX-Policy-and-Charging-Control-R3-Policies Diameter Application (WiMAX PCC-R3-P)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777288,
+      "name": "WiMAX-Policy-and-Charging-Control-R3-OFfline-Charging Diameter Application (WiMAX PCC-R3-OFC)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777289,
+      "name": "WiMAX-Policy-and-Charging-Control-R3-Offline-Charging-Prime Diameter Application (WiMAX PCC-R3-OFC-PRIME)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777290,
+      "name": "WiMAX-Policy-and-Charging-Control-R3-Online-Charging Diameter Application (WiMAX PCC-R3-OC)",
+      "ref": "WiMAX Release 1.5"
+    },
+    {
+      "code": 16777291,
+      "name": "3GPP SLh",
+      "ref": "3GPP TS 29.173"
+    },
+    {
+      "code": 16777292,
+      "name": "3GPP SGmb",
+      "ref": "3GPP TS 29.061"
+    },
+    {
+      "code": 16777293,
+      "name": "CMDI - Cloudmark Diameter Interface"
+    },
+    {
+      "code": 16777294,
+      "name": "Camiant DRMA"
+    },
+    {
+      "code": 16777295,
+      "name": "PiLTE Interworking Diameter Application",
+      "ref": "3GPP2 publication X.S0057"
+    },
+    {
+      "code": 16777296,
+      "name": "Juniper-Sessions-Recovery (JSR)"
+    },
+    {
+      "code": 16777297,
+      "name": "Vedicis LiveProxy"
+    },
+    {
+      "code": 16777298,
+      "name": "Pi*3GPP2 Diameter Application",
+      "ref": "3GPP2 publication X.S0057A E-UTRAN eHRPD"
+    },
+    {
+      "code": 16777299,
+      "name": "Sandvine Rf+"
+    },
+    {
+      "code": 16777300,
+      "name": "Subscription Information Application"
+    },
+    {
+      "code": 16777301,
+      "name": "Ericsson Charging-DCIP"
+    },
+    {
+      "code": 16777302,
+      "name": "3GPP Sy",
+      "ref": "3GPP TS 29.219"
+    },
+    {
+      "code": 16777303,
+      "name": "3GPP Sd",
+      "ref": "3GPP TS 29.212"
+    },
+    {
+      "code": 16777304,
+      "name": "Ericsson Sy"
+    },
+    {
+      "code": 16777305,
+      "name": "HP DTD"
+    },
+    {
+      "code": 16777306,
+      "name": "M9 interface between MLM-PE(P) and MLM-PE(C)",
+      "ref": "ITU-T Q5/Sg11"
+    },
+    {
+      "code": 16777307,
+      "name": "ITU-T M13",
+      "ref": "ITU-T Q.3230"
+    },
+    {
+      "code": 16777308,
+      "name": "3GPP S7a",
+      "ref": "3GPP TS 29.272"
+    },
+    {
+      "code": 16777309,
+      "name": "3GPP Tsp",
+      "ref": "3GPP TS 29.368"
+    },
+    {
+      "code": 16777310,
+      "name": "3GPP S6m",
+      "ref": "3GPP TS 29.336"
+    },
+    {
+      "code": 16777311,
+      "name": "3GPP T4",
+      "ref": "3GPP TS 29.337"
+    },
+    {
+      "code": 16777312,
+      "name": "3GPP S6c",
+      "ref": "3GPP TS 29.338"
+    },
+    {
+      "code": 16777313,
+      "name": "3GPP SGd",
+      "ref": "3GPP TS 29.338"
+    },
+    {
+      "code": 16777314,
+      "name": "Intrado-SLg"
+    },
+    {
+      "code": 16777315,
+      "name": "Ericsson Diameter Signalling Controller Application (DSC)"
+    },
+    {
+      "code": 16777316,
+      "name": "Verizon-Femto-Loc"
+    },
+    {
+      "code": 16777317,
+      "name": "Nokia Siemens Networks (NSN) Hd Application"
+    },
+    {
+      "code": 16777318,
+      "name": "3GPP S15",
+      "ref": "3GPP TS 29.212"
+    },
+    {
+      "code": 16777319,
+      "name": "3GPP S9a",
+      "ref": "3GPP TS 29.215"
+    },
+    {
+      "code": 16777320,
+      "name": "3GPP S9a*",
+      "ref": "3GPP TS 29.215"
+    },
+    {
+      "code": 16777321,
+      "name": "Gateway Location Application"
+    },
+    {
+      "code": 16777322,
+      "name": "Verizon Session Recovery"
+    },
+    {
+      "code": 16777323,
+      "name": "3GPP2 M1 Interface",
+      "ref": "3GPP2 X.S0068"
+    },
+    {
+      "code": 16777324,
+      "name": "MAGIC Client Interface Protocol (CIP)",
+      "ref": "ARINC 839"
+    },
+    {
+      "code": 16777325,
+      "name": "ITU-T Nc",
+      "ref": "ITU-T Rec. Q.nacp.Nc"
+    },
+    {
+      "code": 16777326,
+      "name": "ITU-T Ne",
+      "ref": "ITU-T Rec. Q.nacp.Ne"
+    },
+    {
+      "code": 16777327,
+      "name": "Ericsson Sx"
+    },
+    {
+      "code": 16777328,
+      "name": "Nokia Service Extension, NSE"
+    },
+    {
+      "code": 16777329,
+      "name": "Rivada Xd"
+    },
+    {
+      "code": 16777330,
+      "name": "Rivada Xm"
+    },
+    {
+      "code": 16777331,
+      "name": "Rivada Xh"
+    },
+    {
+      "code": 16777332,
+      "name": "Rivada Xf"
+    },
+    {
+      "code": 16777333,
+      "name": "Rivada Xp"
+    },
+    {
+      "code": 16777334,
+      "name": "Rivada Xa"
+    },
+    {
+      "code": 16777335,
+      "name": "3GPP MB2-C",
+      "ref": "3GPP TS 29.468"
+    },
+    {
+      "code": 16777336,
+      "name": "3GPP PC4a",
+      "ref": "3GPP TS 29.344"
+    },
+    {
+      "code": 16777337,
+      "name": "3GPP PC2",
+      "ref": "3GPP TS 29.343"
+    },
+    {
+      "code": 16777338,
+      "name": "Juniper Domain Policy"
+    },
+    {
+      "code": 16777339,
+      "name": "Host Observer"
+    },
+    {
+      "code": 16777340,
+      "name": "3GPP PC6/PC7",
+      "ref": "3GPP TS 29.345"
+    },
+    {
+      "code": 16777341,
+      "name": "Nokia Sdr Application"
+    },
+    {
+      "code": 16777342,
+      "name": "3GPP Np",
+      "ref": "3GPP TS 29.217"
+    },
+    {
+      "code": 16777343,
+      "name": "Sandvine Location Relay Service"
+    },
+    {
+      "code": 16777344,
+      "name": "Sandvine Fairshare Traffic Management Service"
+    },
+    {
+      "code": 16777345,
+      "name": "3GPP S6t",
+      "ref": "3GPP TS 29.336"
+    },
+    {
+      "code": 16777346,
+      "name": "3GPP T6a/T6b",
+      "ref": "3GPP TS 29.128"
+    },
+    {
+      "code": 16777347,
+      "name": "3GPP Ns",
+      "ref": "3GPP TS 29.153"
+    },
+    {
+      "code": 16777348,
+      "name": "3GPP Nt",
+      "ref": "3GPP TS 29.154"
+    },
+    {
+      "code": 16777349,
+      "name": "3GPP St",
+      "ref": "3GPP TS 29.212"
+    },
+    {
+      "code": 16777350,
+      "name": "3GPP PC2",
+      "ref": "3GPP TS 29.343"
+    },
+    {
+      "code": 16777351,
+      "name": "3GPP Diameter Data Management",
+      "ref": "3GPP TS 29.283"
+    },
+    {
+      "code": 16777352,
+      "name": "ITU-T M1",
+      "ref": "ITU-T Recommendation Q.nacp.M1"
+    },
+    {
+      "code": 16777353,
+      "name": "ITU-T M2",
+      "ref": "ITU-T Recommendation Q.nacp.M2"
+    },
+    {
+      "code": 16777354,
+      "name": "Verizon-NLS-WDS"
+    },
+    {
+      "code": 16777355,
+      "name": "3GPP V4",
+      "ref": "3GPP TS 29.388"
+    },
+    {
+      "code": 16777356,
+      "name": "3GPP V6",
+      "ref": "3GPP TS 29.389"
+    },
+    {
+      "code": 16777357,
+      "name": "OMN Adapt Application"
+    },
+    {
+      "code": 16777358,
+      "name": "3GPP Nta",
+      "ref": "3GPP TS 29.154"
+    },
+    {
+      "code": 16777359,
+      "name": "Ericsson Charging - SBI Policy"
+    },
+    {
+      "code": 16777360,
+      "name": "GSMA-DESS",
+      "ref": "GSMA PRD FS.19"
+    },
+    {
+      "code": 16777361,
+      "name": "Ericsson Charging - SBI Policy over Ericsson N28 Interface"
+    },
+    {
+      "code": 16777362,
+      "name": "OMN Protect Application"
+    },
+    {
+      "code": 16777363,
+      "name": "3GPP Sc",
+      "ref": "3GPP TS 29.330"
+    },
+    {
+      "code": 16777364,
+      "name": "OMN Message Replication"
+    },
+    {
+      "code": 4294967295,
+      "name": "Relay",
+      "ref": "RFC 6733"
+    }
+  ]
+}
