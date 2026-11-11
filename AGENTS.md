@@ -11,6 +11,7 @@
 5. `tools/gendata`: regenerates `internal/diameter/iana.json` from the IANA AAA Parameters registry.
 6. `interop/`: separate Go module that runs the real binary against go-diameter. `interop/demo` records `docs/demo.gif`.
 7. `.github/workflows/ci.yml`: jobs `test` (Go 1.22 and stable), `lint` (staticcheck) and `interop`.
+8. This repo is public and intentionally has no autonomous agent team: no ops role, no scheduled run, no agent workflow. Code work here is by hand or from a manual run someone starts on purpose.
 
 ## Commands
 
